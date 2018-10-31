@@ -2,20 +2,11 @@
   border-style:dotted;
   border-color:black;
 }
-#resetbutton{
-    position: fixed;
-    top: 210px;
-    left: 10px;
-}
 #size{
     position: static;
-    width: 50px;
-    top: 210px;
-    left: 150px;
+    width: 50px; 
 }
 canvas {
     position: static;
     background-color: black;
-    top: 0px;
-    left: 0px;
 }
