@@ -1,5 +1,6 @@
 function reset(){
-	inc = (300 / document.getElementById("size").value);
+	size = Math.floor(300 / document.getElementById("size").value)
+	inc = size;
 	border = 300;
 	Xval = 0;
 	Yval = 0;
