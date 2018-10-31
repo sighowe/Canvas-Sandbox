@@ -8,13 +8,13 @@
     left: 10px;
 }
 #size{
-    position: fixed;
+    position: static;
     width: 50px;
     top: 210px;
     left: 150px;
 }
 canvas {
-    position: fixed;
+    position: static;
     background-color: black;
     top: 0px;
     left: 0px;
