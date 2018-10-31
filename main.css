@@ -1,0 +1,21 @@
+#main{
+  border-style:dotted;
+  border-color:black;
+}
+#resetbutton{
+    position: fixed;
+    top: 210px;
+    left: 10px;
+}
+#size{
+    position: fixed;
+    width: 50px;
+    top: 210px;
+    left: 150px;
+}
+canvas {
+    position: fixed;
+    background-color: black;
+    top: 0px;
+    left: 0px;
+}
