@@ -1,6 +1,7 @@
+
 function reset(){
-	size = Math.floor(300 / document.getElementById("size").value)
-	inc = size;
+	size = document.getElementById("size").value;
+	inc = 300/size;
 	border = 300;
 	Xval = 0;
 	Yval = 0;
@@ -13,7 +14,8 @@ var Yval = 0;
 var cont = true;
 var num = 1;
 var inc = 200;
-
+var size = 10;
+var border = 300;
 
 //set up canvas
 var c=document.getElementById("main");
