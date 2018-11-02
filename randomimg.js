@@ -1,4 +1,3 @@
-
 function reset(){
 	size = document.getElementById("size").value;
 	inc = 300/size;
@@ -16,7 +15,6 @@ var num = 1;
 var inc = 200;
 var size = 10;
 var border = 300;
-
 //set up canvas
 var c=document.getElementById("main");
 var ctx=c.getContext("2d");
@@ -47,3 +45,4 @@ while(Yval != border + inc){
 Dpixel(getRandomColour());
 }
 }
+reset();
