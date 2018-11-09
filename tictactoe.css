@@ -9,6 +9,16 @@ td {
   height: 150px;
   text-align: center;
 }
+td:hover {
+  color: Orange;
+  border: dashed;
+  border-width: 3px;
+  border-color: black;
+  text-shadow: 2px 2px RED;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+}
 
 table {
   border: dashed;
