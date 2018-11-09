@@ -1,3 +1,7 @@
 body{
     line-height: 10px;
 }
+img:hover {
+	border-style: dashed;
+	border-width: 10px;
+}
