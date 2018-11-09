@@ -19,3 +19,9 @@ table {
   font-size: 150px;
   user-select: none; /* Standard */
 }
+
+img:hover{
+	border-style: dashed;
+	border-width: 3px;
+	border-color: black;
+}	

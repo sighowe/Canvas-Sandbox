@@ -9,3 +9,11 @@ canvas {
     position: static;
     background-color: black;
 }
+img{
+    position: static;
+}	
+img:hover {
+    border-style: dashed;
+    border-color: black;
+    border-width: 3px;
+}
