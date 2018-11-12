@@ -28,10 +28,31 @@ table {
   background-color: SLATEGRAY;
   font-size: 150px;
   user-select: none; /* Standard */
+  float: left;
 }
 
 img:hover{
 	border-style: dashed;
 	border-width: 3px;
 	border-color: black;
-}	
+}
+img {
+  float: none;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+#Q{
+	float: right;
+}
+#X{
+	float: right;
+}
+#Qwin{
+  position: relative;
+  left: 50px;
+}
+#Xwin{
+  position: relative;
+  left: 50px;
+}

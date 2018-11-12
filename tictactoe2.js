@@ -49,9 +49,10 @@ var Dboard = [
       }
 
       if (win) {
-        alert(n + " Wins!");
+        document.getElementById(n+'win').innerHTML = parseInt(document.getElementById(n+'win').innerHTML) + 1;
         reset();
         win = false;
+		  
       }}
 
     

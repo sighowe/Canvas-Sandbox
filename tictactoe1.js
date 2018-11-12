@@ -42,7 +42,8 @@ var turn = 0;
       checkwin("X");
       checkwin("Q");
       if(turn == 9){
-      	alert("Tie!")
+      	document.getElementById('Xwin').innerHTML = parseInt(document.getElementById('Xwin').innerHTML) + 1;
+		  document.getElementById('Qwin').innerHTML = parseInt(document.getElementById('Qwin').innerHTML) + 1;
         reset();
       }
     }}
