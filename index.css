@@ -5,4 +5,6 @@ img:hover {
 	border-style: dashed;
 	border-width: 10px;
 	border-color: black;
+	width: 280px;
+	height: 280px;
 }
