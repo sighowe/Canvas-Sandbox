@@ -1,6 +1,6 @@
 //size of canvas and number of sqares are set here, to be changed later
-size = 400;
-dim = 100;
+size = 800;
+dim = 25;
 //generates random integer
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
