@@ -21,7 +21,7 @@ var create = function(){
 var drawColor = function(x, y, color){
   document.getElementById((x+1).toString()+(y+1).toString()).style.backgroundColor = color;
   if(color == 'pink'){
-    Player = (x+1).toString()+(y+1).toString();
+    Player = (y+1).toString()+(x+1).toString();
   }
 };
 //Draws the entire board
@@ -49,14 +49,14 @@ var startPlayer = function(){
 var updatePlayer = function(){
   for (a = 0; a < 7; a ++ ) {
 		for (b = 0; b < 7; b ++) {
-		if(array[b][a] == "player"){
+		if(mainArr[b][a] == "player"){
 		  mainArr[b][a] = 'white';
     }
 	}}
-  mainArr[Player[0] - 1][Player[1] - 1] = "player";
+  console.log(Player.toString().substring(1,2));
+  mainArr[Player.toString().substring(0,1)][Player.toString().substring(1,2)] = "player";
+  draw(mainArr);
 }
 mainArr = create()
 while(!startPlayer()){}
 draw(mainArr);
-console.log(Player);
-
