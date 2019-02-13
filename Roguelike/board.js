@@ -1,5 +1,10 @@
 var Player = 0;
+var Enemy = 0;
 var Enemies = 0;
+const white = "white";
+const black = "black";
+const player = "player";
+const enemy = "enemy";
 //Generates an array
 var create = function(){
     var arr = [];
@@ -23,6 +28,9 @@ var drawColor = function(x, y, color){
   document.getElementById((x+1).toString()+(y+1).toString()).style.backgroundColor = color;
   if(color == 'pink'){
     Player = (y+1).toString()+(x+1).toString();
+  }
+  if(color == 'red'){
+    Enemy = (y+1).toString()+(x+1).toString();
   }
 };
 //Draws the entire board
@@ -66,14 +74,33 @@ var updatePlayer = function(){
 		  mainArr[b][a] = 'white';
     }
 	}}
-  console.log(Player.toString().substring(1,2));
   mainArr[(Player.toString().substring(0,1)) - 1][(Player.toString().substring(1,2)) - 1] = "player";
   draw(mainArr);
   if(Enemies == 0){
     console.log("Player wins!");
   }
 }
-mainArr = create()
-while(!startPlayer()){}
-while(!startEnemy()){}
+var updateEnemy = function(){
+  for (a = 0; a < 7; a ++ ) {
+		for (b = 0; b < 7; b ++) {
+		if(mainArr[b][a] == "enemy"){
+		  mainArr[b][a] = 'white';
+    }
+	}}
+  mainArr[(Enemy.toString().substring(0,1)) - 1][(Enemy.toString().substring(1,2)) - 1] = "enemy";
+  draw(mainArr);
+}
+//mainArr = create()
+//while(!startPlayer()){}
+//while(!startEnemy()){}
+var mainArr = [
+  [player, white, white, black, black, white, white],
+  [white, black, white, white, white, black, white], 
+  [white, black, white, white, white, white, white], 
+  [white, black, white, white, white, white, white], 
+  [white, white, black, white, white, white, white], 
+  [white, white, white, white, white, white, white], 
+  [enemy, white, white, white, white, white, white]
+]
+Enemies = 1;
 draw(mainArr);

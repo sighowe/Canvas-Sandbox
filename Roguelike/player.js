@@ -53,6 +53,7 @@ var Navigate = function(a) {
 
       }
       updatePlayer();
+      EnemyTurn();
     }
 
 
