@@ -1,4 +1,5 @@
 var Player = 0;
+var Enemies = 0;
 //Generates an array
 var create = function(){
     var arr = [];
@@ -34,6 +35,9 @@ var draw = function(array){
     else if(array[b][a] == "player"){
       drawColor(a, b, 'pink');
     }
+    else if(array[b][a] == 'enemy'){
+      drawColor(a, b, "red");
+    }
 		else{
 		  drawColor(a, b, "black");
 	}}}
@@ -46,6 +50,15 @@ var startPlayer = function(){
     x = false;
     return(true);
 }}
+var startEnemy = function(){
+  var i = (Math.floor(Math.random() * 7));
+  var j = (Math.floor(Math.random() * 7));
+  if(mainArr[i][j] == "white"){
+    mainArr[i][j] = "enemy";
+    x = false;
+    Enemies = Enemies + 1;
+    return(true);
+}}
 var updatePlayer = function(){
   for (a = 0; a < 7; a ++ ) {
 		for (b = 0; b < 7; b ++) {
@@ -56,7 +69,11 @@ var updatePlayer = function(){
   console.log(Player.toString().substring(1,2));
   mainArr[(Player.toString().substring(0,1)) - 1][(Player.toString().substring(1,2)) - 1] = "player";
   draw(mainArr);
+  if(Enemies == 0){
+    console.log("Player wins!");
+  }
 }
 mainArr = create()
 while(!startPlayer()){}
+while(!startEnemy()){}
 draw(mainArr);
