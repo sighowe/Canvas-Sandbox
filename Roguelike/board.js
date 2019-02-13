@@ -97,10 +97,10 @@ var mainArr = [
   [player, white, white, black, black, white, white],
   [white, black, white, white, white, black, white], 
   [white, black, white, white, white, white, white], 
-  [white, black, white, white, white, white, white], 
+  [white, black, enemy, white, white, white, white], 
   [white, white, black, white, white, white, white], 
   [white, white, white, white, white, white, white], 
-  [enemy, white, white, white, white, white, white]
+  [black, white, white, white, white, white, white]
 ]
 Enemies = 1;
 draw(mainArr);

@@ -4,24 +4,19 @@ var EnemyTurn = function(){
         memory = (Math.floor(Math.random() * 7));
         console.log(((Player).toString().substring(0, 1)));
         console.log(((Enemy).toString().substring(0, 1)));
-        if(memory > 4){
-        if(((Player).toString().substring(0, 1)) < ((Enemy).toString().substring(0, 1))){
-            EnemyNavigate(-10);
+        if(Player-Enemy == 11){
+            EnemyNavigate(11);
         }
-        else if(((Player).toString().substring(0, 1)) > ((Enemy).toString().substring(0, 1))){
-
-            EnemyNavigate(10);
-        }}
-        else{
-            if(((Player).toString().substring(1, 2)) < ((Enemy).toString().substring(1, 2))){
-
-                EnemyNavigate(-1);
-            }
-            else if(((Player).toString().substring(1, 2)) > ((Enemy).toString().substring(1, 2))){
-
-                EnemyNavigate(1);
-            }
+        if(Player-Enemy == 9){
+            EnemyNavigate(9);
         }
+        if(Player-Enemy == -11){
+            EnemyNavigate(-11);
+        }
+        if(Player-Enemy == -9){
+            EnemyNavigate(-9);
+        }
+
 
     }
     
