@@ -54,7 +54,7 @@ var updatePlayer = function(){
     }
 	}}
   console.log(Player.toString().substring(1,2));
-  mainArr[Player.toString().substring(0,1)][Player.toString().substring(1,2)] = "player";
+  mainArr[(Player.toString().substring(0,1)) - 1][(Player.toString().substring(1,2)) - 1] = "player";
   draw(mainArr);
 }
 mainArr = create()

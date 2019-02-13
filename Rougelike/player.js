@@ -15,7 +15,7 @@ $(document).keydown(function(e) {
 
         case 39:
           console.log("Right keypress detected!");
-          Navigate((-1).parseInt());
+          Navigate(-1);
         break;
 
         case 40:
