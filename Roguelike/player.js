@@ -4,23 +4,23 @@ $(document).keydown(function(e) {
     switch(e.which) {
         case 37:
           console.log("Left keypress detected!");
-          Navigate(1);
+          Navigate(-10);
 
         break;
 
         case 38:
           console.log("Up keypress detected!");
-          Navigate(10);
+          Navigate(-1);
         break;
 
         case 39:
           console.log("Right keypress detected!");
-          Navigate(-1);
+          Navigate(10);
         break;
 
         case 40:
           console.log("Down keypress detected!");
-          Navigate(-10);
+          Navigate(1);
         break;
 
         default: return; // exit this handler for other keys
