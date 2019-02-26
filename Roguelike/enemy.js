@@ -1,3 +1,4 @@
+var win = 0;
 var memory = 0
 var EnemyTurn = function(){
     if(Enemies == 1){
@@ -16,7 +17,20 @@ var EnemyTurn = function(){
         if(Player-Enemy == -9){
             EnemyNavigate(-9);
         }
-
+        if(Player-Enemy == -10){
+            EnemyNavigate(-10);
+        }
+        if(Player-Enemy == 10){
+            EnemyNavigate(10);
+        }
+        if(Player-Enemy == -1){
+            EnemyNavigate(-1);
+        }
+        if(Player-Enemy == 1){
+            EnemyNavigate(1);
+        }
+        
+        
 
     }
     
@@ -42,7 +56,12 @@ var EnemyNavigate = function(a) {
         if (Enemy < 10) {
           Enemy = '0' + Enemy.toString()
         }
-        console.log("Player Loses!")
+        win = 1;        
+        setTimeout(function (){
+  	alert("Player loses.");
+	
+}, 50)
+        
 
 
       }
