@@ -90,17 +90,8 @@ var updateEnemy = function(){
   mainArr[(Enemy.toString().substring(0,1)) - 1][(Enemy.toString().substring(1,2)) - 1] = "enemy";
   draw(mainArr);
 }
-//mainArr = create()
-//while(!startPlayer()){}
-//while(!startEnemy()){}
-var mainArr = [
-  [player, white, white, black, black, white, white],
-  [white, black, white, white, white, black, white], 
-  [white, black, white, white, white, white, white], 
-  [white, black, enemy, white, white, white, white], 
-  [white, white, black, white, white, white, white], 
-  [white, white, white, white, white, white, white], 
-  [black, white, white, white, white, white, white]
-]
+mainArr = create()
+while(!startPlayer()){}
+while(!startEnemy()){}
 Enemies = 1;
 draw(mainArr);

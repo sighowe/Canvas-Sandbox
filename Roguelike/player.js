@@ -1,5 +1,5 @@
 window.displayBoxIndex = -1;
-
+var turns = 0
 $(document).keydown(function(e) {
   if(win == 0){
   switch (e.which) {
@@ -49,10 +49,19 @@ var Navigate = function(a) {
         if (Player < 10) {
           Player = '0' + Player.toString()
         }
-        alert("Player wins!")
+        setTimeout(function (){
+  	alert("Player wins!");
+	
+}, 50)
 
       }
-      
+      turns = turns + 1
+      if(turns == 21){
+      setTimeout(function (){
+  	alert("Tie!");
+	win = 2;
+	}, 50)
+}
       updatePlayer();
       EnemyTurn();
     }
