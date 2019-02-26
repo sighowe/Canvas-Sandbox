@@ -52,14 +52,9 @@ var EnemyNavigate = function(a) {
           Enemy = '0' + Enemy.toString()
         }
       } else if (mainArr[((Enemy + a).toString().substring(0, 1)) - 1][((Enemy + a).toString().substring(1, 2)) - 1] == "player") {
-        Enemy = Enemy + a
-        if (Enemy < 10) {
-          Enemy = '0' + Enemy.toString()
-        }
-        win = 1;        
         setTimeout(function (){
-  	alert("Player loses.");
-	
+  	PH = PH - 1;
+	//Maybe update health?
 }, 50)
         
 
@@ -67,7 +62,78 @@ var EnemyNavigate = function(a) {
       }
       updateEnemy();
     }
-
-
-
 }
+function checky(){
+if(win != 2){
+if(PH <= 0){
+setTimeout(function(){
+  win = 2;
+  alert("You have died")
+}, 50)
+}
+else if(EH <= 0){
+setTimeout(function (){
+  win = 2;
+  alert("You emerge Victorious!")
+}, 50)
+}	
+if(PH >= 1){
+document.getElementById("PH1").style.backgroundColor = "Green";
+}
+else{
+document.getElementById("PH1").style.backgroundColor = "Gray";
+}
+if(PH >= 2){
+document.getElementById("PH2").style.backgroundColor = "Green";
+}
+else{
+document.getElementById("PH2").style.backgroundColor = "Gray";
+}
+if(PH >= 3){
+document.getElementById("PH3").style.backgroundColor = "Green";
+}
+else{
+document.getElementById("PH3").style.backgroundColor = "Gray";
+}
+if(PH >= 4){
+document.getElementById("PH4").style.backgroundColor = "Green";
+}
+else{
+document.getElementById("PH4").style.backgroundColor = "Gray";
+}
+if(PH >= 5){
+document.getElementById("PH5").style.backgroundColor = "Green";
+}
+else{
+document.getElementById("PH5").style.backgroundColor = "Gray";
+}
+if(EH >= 1){
+document.getElementById("EH1").style.backgroundColor = "Red";
+}
+else{
+document.getElementById("EH1").style.backgroundColor = "Pink";
+}
+if(EH >= 2){
+document.getElementById("EH2").style.backgroundColor = "Red";
+}
+else{
+document.getElementById("EH2").style.backgroundColor = "Pink";
+}
+if(EH >= 3){
+document.getElementById("EH3").style.backgroundColor = "Red";
+}
+else{
+document.getElementById("EH3").style.backgroundColor = "Pink";
+}
+if(EH >= 4){
+document.getElementById("EH4").style.backgroundColor = "Red";
+}
+else{
+document.getElementById("EH4").style.backgroundColor = "Pink";
+}
+
+
+
+
+}}
+setInterval(checky, 50);

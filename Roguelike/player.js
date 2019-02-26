@@ -1,3 +1,6 @@
+EH = 3;
+PH = 5;
+
 window.displayBoxIndex = -1;
 var turns = 0
 $(document).keydown(function(e) {
@@ -45,18 +48,13 @@ var Navigate = function(a) {
           Player = '0' + Player.toString()
         }
       } else if (mainArr[((Player + a).toString().substring(0, 1)) - 1][((Player + a).toString().substring(1, 2)) - 1] == "enemy") {
-        Player = Player + a
-        if (Player < 10) {
-          Player = '0' + Player.toString()
-        }
         setTimeout(function (){
-  	alert("Player wins!");
-	
+  	EH = EH - 1;
 }, 50)
 
       }
       turns = turns + 1
-      if(turns == 21){
+      if(turns == 50){
       setTimeout(function (){
   	alert("Tie!");
 	win = 2;
