@@ -1,0 +1,171 @@
+<h1>Mango Clicker</h1> <button>Back to menu</button>
+<link rel="stylesheet" type="text/css" href="./index.css">
+<table>
+    <tr>
+      <td class="tile" id="00" onclick="clicko('00');"></td>
+      <td class="tile" id="01" onclick="clicko('01');"></td>
+      <td class="tile" id="02" onclick="clicko('02');"></td>
+    </tr>
+    <tr>
+      <td class="tile" id="10" onclick="clicko('10');"></td>
+      <td class="tile" id="11" onclick="clicko('11');"></td>
+      <td class="tile" id="12" onclick="clicko('12');"></td>
+    </tr>
+    <tr>
+      <td class="tile" id="20" onclick="clicko('20');"></td>
+      <td class="tile" id="21" onclick="clicko('21');"></td>
+      <td class="tile" id="22" onclick="clicko('22');"></td>
+    </tr>
+    <script>
+        var turn = 0;
+      var win = false;
+        var curplayer = "X";
+      var board = [
+        ["", "", ""],
+        ["", "", ""],
+        ["", "", ""]
+      ]
+      var update = function() {
+          x = 0;
+        y = 0;
+        while (y != board.length) {
+          while (x != board.length) {
+            document.getElementById(x.toString() + y.toString()).innerHTML = board[x][y];
+            x++
+          }
+          y++
+          x = 0;
+        }
+  
+  
+      }
+      var usable = [
+      [true, true, true],
+      [true, true, true],
+      [true, true, true]
+      ]
+      var clicko = function(ID) {
+        x = ID[0];
+        y = ID[1];
+        if(usable[x][y]){
+        usable[x][y] = false;
+        board[x][y] = curplayer;
+        update();
+        turn += 1;
+        if(turn % 2 == 1){
+            curplayer = "Q";
+        }
+        else{
+            curplayer = "X"
+        }
+        checkwin("X");
+        checkwin("Q");
+        if(turn == 9){
+            alert("Tie!")
+          reset();
+        }
+      }}
+      var x = 0;
+      var y = 0;
+  
+    </script>
+    <script>
+      var Dboard = [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]
+      ];
+      var checkwin = function(n) {
+        debugupdate(n);
+        if (Dboard[0][0]) {
+          if (Dboard[0][1]) {
+            if (Dboard[0][2]) {
+              win = true;
+            }
+          }
+          if (Dboard[1][0]) {
+            if (Dboard[2][0]) {
+              win = true;
+            }
+          }
+        }
+        if (Dboard[1][1]) {
+          if (Dboard[0][1]) {
+            if (Dboard[2][1]) {
+              win = true;
+            }
+          }
+          if (Dboard[1][0]) {
+            if (Dboard[1][2]) {
+              win = true;
+            }
+          }}
+          if (Dboard[2][2]) {
+            if (Dboard[1][2]) {
+              if (Dboard[0][2]) {
+                win = true;
+              }
+            }
+            if (Dboard[2][1]) {
+              if (Dboard[2][0]) {
+                win = true;
+              }
+            }
+          }
+        
+        if (Dboard[0][0] && Dboard[1][1] && Dboard[2][2]) {
+          win = true;
+        }
+        if (Dboard[0][2] && Dboard[1][1] && Dboard[2][0]) {
+          win = true;
+        }
+  
+        if (win) {
+          alert(n + " Wins!");
+          reset();
+          win = false;
+        }}
+  
+      
+  
+  
+      var debugupdate = function(n) {
+        x = 0;
+        y = 0;
+        while (y != board.length) {
+          while (x != board.length) {
+            if (board[x][y] == n) {
+              Dboard[x][y] = 1;
+            } else {
+              Dboard[x][y] = 0;
+            }
+            x++
+          }
+          y++
+          x = 0;
+        }
+      }
+          
+      var reset = function() {
+    board = [
+      ['', '', ''],
+      ['', '', ''],
+      ['', '', ''],
+    ]
+    usable = [
+        [true, true, true],
+      [true, true, true],
+      [true, true, true],
+    
+    ]
+    x = 0;
+    y = 0;
+    turn = 0;
+    curplayer = "X";
+    update();
+      curplayer = "X";
+  }
+  reset();
+  update();
+    </script>
+  </table>

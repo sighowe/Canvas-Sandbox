@@ -1,0 +1,25 @@
+#main{
+  border-style:dotted;
+  border-color:black;
+}
+#size{
+    position: static;
+}
+canvas {
+    position: static;
+    background-color: black;
+}
+img{
+    position: static;
+}
+img:hover {
+    border-style: dashed;
+    border-color: black;
+    border-width: 3px;
+}
+img {
+  float: none;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}

@@ -1,0 +1,373 @@
+<!-- Mango Counter Skeleton-->
+<h1>Mango Clicker</h1>
+<h1 id="MangoCounter">
+    You have 0 Mangoes!
+  </h1>
+  <!--This is the skeleton for the Main Menu-->
+  <div id="Menu">
+    <button onclick="AddMango();" id="MangoB">
+  <big><big><big><big><big><big><big><big><big><big><big><big><big><big><big><big><big><big>芒<!--This is actually the main button--></big></big></big></big></big></big></big></big></big></big></big></big></big></big></big></big></big></big>
+  </button><br><br>
+    <!-- Yes, this is horribly inefficent... No, i don't care.-->
+    <button onclick="OpenShop();">
+  <big><big><big>店<!--This is the button for the shop--></big></big></big> <!--I pride myself on my BIG sense of humour,-->
+  </button>
+    <button id="MenuC" onclick="OpenMenuC();">
+  <big>Changelog</big> <!--This is the button for the changelog-->
+  </button>
+  </div>
+  
+  <!-- This is the skeleton for the shop -->
+  <div id="Shop">
+    <!-- This is the skeleton for the Tier 1 items in the shop -->
+    <div id="Tier 1">
+      <h1>
+        Tier 1 Upgrades
+      </h1>
+      <br>
+      <br>
+      <p>
+        <!-- This is the skeleton for the first shop item -->
+        <!---->
+        <big>Plant a mango bush</big> <br> <small>+.01 Mangoes per Second</small>
+        <br><button id="C11" onclick="BuyObject(P11, .01, 11);"> <!-- Parameters for the BuyObject function: (Price Label, Price, Label) -->
+             Buy
+             </button> <small id="L11">*Cost 10 Mangoes*</small>
+      </p>
+      <!--I had to put everything in <p> tags to get them structured correctly-->
+      <!---->
+      <br>
+      <p>
+        <big>Plant a mango tree</big> <br> <small>+.1 Mangoes per second</small>
+        <br><button onclick="BuyObject(P12, .1, 12);">
+             Buy
+             </button> <small id="L12">*Cost 50 Mangoes*</small>
+      </p>
+      <br>
+      <p>
+        <big>Plant a mango shrub</big> <br> <small>+.5 Mangoes per second</small>
+        <br><button onclick="BuyObject(P13, .5, 13);">
+             Buy
+             </button> <small id="L13">*Cost 100 Mangoes*</small>
+      </p><br>
+      <p>
+        <big>Blackmail a friend's Mango Dealer</big> <br> <small>+1 Mangoes per second</small>
+        <br><button onclick="BuyObject(P14, 1, 14);">
+             Buy
+             </button> <small id="L14">*Cost 150 Mangoes*</small>
+      </p><br>
+      <p>
+        <big>Blackmail a friend Mango dealer's suppier</big> <br> <small>+5 Mangoes per second</small>
+        <br><button onclick="BuyObject(P15, 5, 15);">
+             Buy
+             </button> <small id="L15">*Cost 250 Mangoes*</small>
+      </p><br>
+      <br>
+      <br>
+    </div>
+    <div id="Tier 2">
+      <h1>
+        Tier 2 Upgrades
+      </h1>
+      <br>
+      <br>
+      <p>
+        <big>Buy mangoes in a supermarket</big> <br> <small>+10 Mangoes per Second</small>
+        <br><button id="C21" onclick="BuyObject(P21, 10, 21);">
+             Buy
+             </button> <small id="L21">*Cost 500 Mangoes*</small>
+      </p>
+      <br>
+      <p>
+        <big>Buy the most expensive mangoes from a supermarket</big> <br> <small>+15 Mangoes per second</small>
+        <br><button onclick="BuyObject(P22, 15, 22);">
+             Buy
+             </button> <small id="L22">*Cost 750 Mangoes*</small>
+      </p>
+      <br>
+      <p>
+        <big>Steal a few mangoes from the supermarket</big> <br> <small>+25 Mangoes per second</small>
+        <br><button onclick="BuyObject(P23, 25, 23);">
+             Buy
+             </button> <small id="L23">*Cost 900 Mangoes*</small>
+      </p><br>
+      <p>
+        <big>Import mangoes from the phillipenes</big> <br> <small>+50 Mangoes per second</small>
+        <br><button onclick="BuyObject(P24, 50, 24);">
+             Buy
+             </button> <small id="L24">*Cost 1250 Mangoes*</small>
+      </p><br>
+      <p>
+        <big>Steal large quantities of mangoes from a supermarket</big> <br> <small>+75 Mangoes per second</small>
+        <br><button onclick="BuyObject(P25, 75, 25);">
+             Buy
+             </button> <small id="L15">*Cost 1500 Mangoes*</small>
+    </div>
+    <div id="NonRepeat">
+      <!--Non-Repeatable upgrades-->
+      <h1>
+        Non-Repeatable Upgrade
+      </h1>
+      <br>
+      <br>
+      <td>
+        <nobr>
+          <p>
+            <big>Blackmail a friend</big> <br> <small>*Round Mangoes per click up to the nearest whole number*</small>
+            <br><button id="FriendButton" onclick="BuyTap('FriendButton', 200, 1, '2Up');"> <!--(Paremeters: Price, Upgrade, ID)-->
+             Buy
+             </button> <small>*Cost 200 Mangoes*</small>
+          </p>
+          <p id="2Up">
+            <big>Sell stolen mangoes in a supermarket</big> <br> <small>*Clicking gives 10 mangoes instead of 1*</small>
+            <br><button id="SuperButton" onclick="BuyTap('SuperButton', 5000, 9, '2Up');">
+             Buy
+             </button> <small>*Cost 5000 Mangoes*</small>
+          </p>
+        </nobr>
+      </td>
+    </div>
+  
+  
+  
+  
+  
+  
+  
+  
+    <button id="MenuB" onclick="OpenMenu();">
+  <big>芒</big>
+  </button>
+  </div>
+  
+  <!-- This is the skeleton For the changelog -->
+  <div id="ChangeLog">
+    <!-- This is the text inside of the changelog -->
+    <h1>
+      Changelog
+    </h1>
+    <p1>
+      <strong>3.3</strong> <small>Bug fixes</small>
+      <br> Literally fixed a bug where you could not get out of the changelog
+      <br> <br> <br>
+  
+      <strong>3.2</strong> <small>Tier 2 upgrades</small>
+      <br> + Added Tier 2 upgrades!
+      <br>
+      <Br>
+  
+  
+  
+  
+  
+      <strong><big><big><big>3.0</big></big> <small>Difficulty update</small>
+      <br> ================================================
+      <br>        Made the game more difficult!
+      <br> ================================================
+      <br></big></strong>
+      <br>
+      <strong><big><big>2.0</big></big> Shop Remake
+      <br>* Revised the algorithm the shop runs on
+      <br>* Fixed all mistakes from last version
+      <br>+ Added a function to easily add new shop entries
+      <br>- Removed the old C11 - T00 Labels
+      <br>* Started working on hosting to put project onto
+      <br></strong>
+      <br>
+      <big>1.2</big> <small>The broken update</small>
+      <br>* Accidentally broke the shop HTML
+      <br>* Messed up buttons functionality in shop
+      <br>+ Added a backup for next time this happens
+      <br>- Removed the golden papaya
+      <br>
+      <br>
+      <big>1.1</big> <small>bug fixes</small>
+      <br>* Fixed issue with all shop buttons having the ID FriendButton
+      <br>* Fixed typos in Shop
+      <br>+ Added a mangoes per second variable
+      <br>- Removed The pesky golden papaya again
+      <br>
+      <br>
+      <big>1.0</big> <small>The Shop!</small>
+      <br>* Figured out how to do mangoes per second
+      <br>+ Added Tier 1 items to the shop
+      <br>+ Added the 1000ms loop for MPS
+      <br>- Removed The golden papaya
+      <br>
+      <br>
+      <br>
+      <big>0.3</big> <small>The Shop!</small>
+      <br>* Designed Shop Menu
+      <br>+ Added First item to shop
+      <br>+ Figured out how the shop will work
+      <br>- Removed shop placeholder
+      <br>
+      <br>
+      <br>
+      <big>0.2</big> <small>first revisions</small>
+      <br>* Fixed Issue with menus not hiding
+      <br>+ Added Functionality to main button
+      <br>+ Revised Changelog
+      <br>- Removed Lorem ipsum from the shop
+      <br>
+      <br>
+      <br>
+      <big>0.1</big> <small>first steps</small>
+      <br>+ Added Main button
+      <br>+ Added Shop Menu
+      <br>+ Added Changelog
+      <br>+ Added Buttons connecting the Menus together.
+      </Br>
+    </p1>
+  
+    <button onclick="OpenMenu();">
+  <big>Back</big>
+  </button>
+  </div>
+  <!-- This is the skeleton for the Achievements i was planning on adding -->
+  <div id="Achievements">
+    <h1>
+  
+    </h1>
+  
+  </div>
+  <!-- This is where all the actual javascript is. -->
+  <script>
+    window.setInterval(function() {
+      Mango = Mango + MPS
+      document.getElementById("MangoCounter").textContent = "You have " + Math.round(100 * Mango) / 100 + " Mangoes!";
+    }, 1000);
+  
+  </script>
+  <script>
+    //These set the display to show only what should display at the beginning
+    document.getElementById("Menu").style.display = "block"; //Opens the main game menu
+    document.getElementById("Shop").style.display = "none"; //Hides everything else
+    document.getElementById("ChangeLog").style.display = "none";
+    document.getElementById("2Up").style.display = "none";
+    document.getElementById("Achievements").style.display = "none";
+    // These set all the values for starting the game
+    var tutorial = 1;
+    var Mango = 0; //Begins mango count at zero
+    var MangoInt = 0.1; //Begins Mangoes per click at .01
+    var MPS = 0; //Begins Mangoes per second at zero
+    var P11 = 10; //Sets all starting prices
+    var P12 = 50;
+    var P13 = 100;
+    var P14 = 150;
+    var P15 = 250;
+    var P21 = 500;
+    var P22 = 750;
+    var P23 = 900;
+    var P24 = 1250;
+    var P25 = 1500;
+    //--------------------------------------
+  
+    //This function updates the mango count every time the mango variable is changed,
+    var UpdateMango = function() {
+      document.getElementById("MangoCounter").textContent = "You have " + Math.round(100 * Mango) / 100 + " Mangoes!";
+  
+    }
+  
+    //--------------------------------------
+    //--------------------------------------
+    //This function adds mangoes to a player's balance when they click the main button
+    //Then calls the UpdateMango Function in order to change the display
+    var AddMango = function() {
+      Mango += MangoInt;
+      Mango = Math.round(100 * Mango) / 100;
+      UpdateMango();
+    }
+    //--------------------------------------
+    //--------------------------------------
+    //This function subtracts mangoes from the player.
+    var Charge = function(cost) {
+      if (Mango >= cost) {
+        Mango = Mango - cost;
+        UpdateMango();
+      } else {
+        //This seems unnessicary, but when testing the program, i kept finding that the 
+        //balance was sometimes sent into the negatives, so i split this off in order to
+        //Double check that everything is okay
+        alert("An Unexpected Error has occurred")
+      }
+    }
+  
+    
+  
+    //This function opens the shop menu
+    var OpenShop = function() {
+      document.getElementById("Shop").style.display = "block";
+      document.getElementById("Menu").style.display = "none";
+      document.getElementByOd("MangoCounter").style.display = "block";
+  
+    }
+    //This function opens the main game menu
+    var OpenMenu = function() {
+      document.getElementById("Menu").style.display = "block";
+      document.getElementById("Shop").style.display = "none";
+      document.getElementById("Achievements").style.display = "none";
+      document.getElementById("ChangeLog").style.display = "none";
+    }
+    //This function opens the changelog
+    var OpenMenuC = function() {
+      document.getElementById("Menu").style.display = "none";
+      document.getElementById("Shop").style.display = "none";
+      document.getElementById("ChangeLog").style.display = "block";
+    }
+    //This function would have opened the achievement menu,
+    //If i hadn't been too lazy to finish it
+    var OpenAchieve = function() {
+      document.getElementById("Achievements").style.display = "block";
+      document.getElementById("Menu").style.display = "none";
+    }
+  
+    //This function is the call for the one-time use shop upgrades.
+    var BuyTap = function(label, cost, int, next) {
+      if (Mango >= cost) {
+        Charge(cost); 
+        MangoInt = Math.round(MangoInt + int);
+        document.getElementById(label).textContent = "Bought!";
+        document.getElementById(label).onclick = "";
+        document.getElementById(next).style.display = "block";
+        UpdateMango();
+  
+      }
+  
+    }
+  
+    //These serve no purpose, but when i try to remove them the game stops working
+    //---
+    var a = "a"
+    var b = "a"
+    var costn = 0;
+    //---
+  
+  
+    //This is the main function for shop elements
+    //-----------------
+    var BuyObject = function(cost, it, label) {
+      if (Mango >= cost) {
+        Charge(cost); //Link to Charge function
+        MPS = MPS + it;
+        UpdateMango(); //Link to UpdateMango function
+        a = "L" + label;
+        cost = cost + Math.ceil(0.5 * cost);
+        b = "document.getElementById('" + a + "').textContent = 'An internal error has occured.'"
+        b = "document.getElementById('" + a + "').textContent = '*Cost " + cost + " Mangoes*';"
+        eval(b);
+        b = "P" + label + " = " + cost + ";"
+        eval(b);
+      }
+    }
+    //-----------------
+  
+  </script>
+  <!-- And that's it! Thank you for taking the time to look at my project!-->
+  
+  <img width="50px" height="50px" src="../back.png" onclick="location.href = '../index.html'">
+<style>
+img:hover{
+  border: dotted;
+}
+</style>

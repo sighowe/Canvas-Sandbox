@@ -1,0 +1,10 @@
+body{
+    line-height: 10px;
+}
+img:hover {
+	border-style: dashed;
+	border-width: 10px;
+	border-color: black;
+	height: 280px;
+	width: 280px;
+}

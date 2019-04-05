@@ -1,0 +1,58 @@
+tr {}
+
+td {
+  border: solid;
+  border-width: 1px;
+  border-color: white;
+  text-shadow: 2px 2px DEEPPINK;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+}
+td:hover {
+  color: Orange;
+  border: dashed;
+  border-width: 3px;
+  border-color: black;
+  text-shadow: 2px 2px RED;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+}
+
+table {
+  border: dashed;
+  border-color: GRAY;
+  color: HOTPINK;
+  line-height: .75;
+  background-color: SLATEGRAY;
+  font-size: 150px;
+  user-select: none; /* Standard */
+  float: left;
+}
+
+img:hover{
+	border-style: dashed;
+	border-width: 3px;
+	border-color: black;
+}
+img {
+  float: none;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+#Q{
+	float: right;
+}
+#X{
+	float: right;
+}
+#Qwin{
+  position: relative;
+  left: 50px;
+}
+#Xwin{
+  position: relative;
+  left: 50px;
+}
